@@ -1,0 +1,1152 @@
+:root {
+  --colorMain: #1598BE;
+  --colorOther1: #FFB915;
+  --colorOther2: #FF3415;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+#backDrop {
+  background-color: rgba(48, 48, 48, 0.733);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: fixed;
+}
+
+.ball {
+  font-size: 1.1rem;
+  height: 6rem;
+  width: 6rem;
+  z-index: 3;
+}
+
+
+#bioImg {
+  border: black solid 2px;
+  border-radius: 20%;
+  grid-area: bioImg;
+  margin: 2rem;
+  justify-self: center;
+}
+
+
+#bioText {
+  grid-area: bioText;
+  padding: 1rem;
+  margin: 2rem;
+  line-height: 1.8;
+  text-align: justify;
+
+}
+
+
+body {
+  margin: 0;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "mainContent"
+    "footer";
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+
+#bucketListMoviesProject {
+  align-items: center;
+  display: grid;
+  grid-area: bucketListMoviesProject;
+  grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+  grid-template-rows: .25fr .5fr .5fr .25fr .25fr;
+  grid-template-areas:
+    "title title title title title"
+    "image . description description description"
+    "image . tools tools tools"
+    "image . view video github";
+  justify-items: center;
+  margin: 2em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+
+#bugTrackerApp {
+  align-items: center;
+  display: grid;
+  grid-area: bugTracker;
+  grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+  grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+  grid-template-areas:
+    "title title title title title"
+    "image . description description description"
+    "image . tools tools tools"
+    "image . video view github";
+  justify-items: center;
+  margin: 2em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#connect a:link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+#connect a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+#connect a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+
+#connect a:active {
+  text-decoration: none;
+  color: white;
+}
+
+
+#footer {
+
+  background-color: var(--colorMain);
+  color: rgb(0, 0, 0);
+  font-size: .75em;
+  margin: 0;
+  height: 55px;
+  width: 100%;
+  grid-area: footer;
+  position: relative;
+  bottom: 0rem;
+  z-index: 10;
+}
+
+#footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#footer p {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+
+#formdiv {
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+
+
+.github {
+
+  grid-area: github;
+
+}
+
+
+h2 {
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  grid-area: h2;
+  text-align: center;
+  width: 100%;
+}
+
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  grid-area: h3;
+  text-align: center;
+}
+
+
+h4 {
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  grid-area: h2;
+  text-align: center;
+  width: 100%;
+}
+
+
+#header {
+  background-color: var(--colorMain);
+  opacity: 100%;
+  color: black;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 1fr .25fr .33fr .33fr .33fr .33fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "headerName . headerProjects headerBio headerLinkedIn headerContact";
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+
+  position: fixed;
+  z-index: 500;
+}
+
+
+#headerName {
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-self: center;
+
+}
+
+#headerName a {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#headerName a:link {
+  color: black;
+}
+
+#headerName a:visited {
+  color: black;
+}
+
+#headerName a:hover {
+  color: rgb(228, 228, 228);
+  transition-duration: 300ms;
+}
+
+
+/* #hero {
+  background-color: rgba(119, 119, 119, 0.363);
+  position: relative;
+  grid-area: hero;
+  top: 5rem;
+  z-index: 0;
+} */
+
+
+.heroVid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+#headerProjects {
+  padding-top: 10px;
+  animation-name: headerProjects;
+  animation-duration: 3s;
+  grid-area: headerProjects;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  transform: scale(1);
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+
+
+/* 
+@keyframes headerProjects {
+
+  from {
+    opacity: 0%;
+  }
+  
+  to {
+    opacity: 100%;
+  }
+  
+  } */
+
+
+#headerProjects a {
+  font-size: 1.15em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#headerProjects a:link {
+  color: black;
+}
+
+#headerProjects a:visited {
+  color: black;
+}
+
+#headerProjects a:hover {
+  color: rgb(228, 228, 228);
+  transition-duration: 300ms;
+}
+
+#headerLinkedIn {
+  padding-top: 10px;
+  animation-name: headerLinkedIn;
+  animation-duration: 3s;
+  grid-area: headerLinkedIn;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  transform: scale(1);
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+
+
+/* 
+@keyframes headerProjects {
+
+  from {
+    opacity: 0%;
+  }
+  
+  to {
+    opacity: 100%;
+  }
+  
+  } */
+
+
+#headerLinkedIn a {
+  font-size: 1.15em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#headerLinkedIn a:link {
+  color: black;
+}
+
+#headerLinkedIn a:visited {
+  color: black;
+}
+
+#headerLinkedIn a:hover {
+  color: rgb(228, 228, 228);
+  transition-duration: 300ms;
+}
+
+
+#headerContact {
+  display: grid;
+  grid-area: headerContact;
+  padding-top: 10px;
+  animation-name: headerContact;
+  animation-duration: 3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  padding-left: 0rem;
+  padding-right: 1rem;
+  transform: scale(1.0);
+  transition-duration: .25s;
+  transition-timing-function: linear;
+
+}
+
+/* @keyframes headerSkills {
+
+  from {
+    opacity: 0%;
+  }
+  
+  to {
+    opacity: 100%;
+  }
+  
+  } */
+
+
+
+#headerContact a {
+  font-size: 1.15em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#headerContact a:link {
+  color: black;
+}
+
+#headerContact a:visited {
+  color: black;
+}
+
+#headerContact a:hover {
+  color: rgb(228, 228, 228);
+  transition-duration: 300ms;
+}
+
+
+#headerBio {
+  display: grid;
+  grid-area: headerBio;
+  padding-top: 10px;
+  animation-name: headerBio;
+  animation-duration: 3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  transform: scale(1.0);
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+
+
+/* @keyframes headerBio {
+
+  from {
+    opacity: 0%;
+  }
+  
+  to {
+    opacity: 100%;
+  }
+  
+  } */
+
+
+#headerBio a {
+  font-size: 1.15em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#headerBio a:link {
+  color: black;
+}
+
+#headerBio a:visited {
+  color: black;
+}
+
+#headerBio a:hover {
+  color: rgb(228, 228, 228);
+  transition-duration: 300ms;
+}
+
+
+#header p {
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+hr {
+  border: 0;
+  border-top: solid 4px;
+  grid-area: hr;
+  height: 0;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+
+html {
+  background-color: whitesmoke;
+  scroll-behavior: smooth;
+}
+
+
+
+#jobTitle {
+  grid-area: jobTitle;
+  animation-name: jobTitle;
+  animation-duration: 3s;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+
+/* @keyframes jobTitle {
+
+from {
+  opacity: 0%;
+}
+
+to {
+  opacity: 100%;
+}
+
+} */
+
+
+#mainContent {
+  display: grid;
+  grid-area: mainContent;
+  grid-column: 1fr;
+  padding-top: 0vh;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+
+#mainBio {
+  display: grid;
+  padding-top: 12vh;
+  padding-bottom: 5rem;
+  width: 100%;
+  color: #000000;
+  background-color: rgba(216, 216, 216, 0.9);
+  grid-template-rows: auto auto;
+  grid-template-columns: .25fr 1fr 1fr .25fr;
+  grid-template-areas:
+    ". bioImg . ."
+    ". bioImg h2 . "
+    ". bioImg bioText bioText"
+    " . bioImg . . ";
+  z-index: 10;
+}
+
+
+#mainBio p {
+
+
+  font-size: 1.25rem;
+}
+
+
+#message {
+  font-size: 1em;
+  height: 15em;
+  width: 30em;
+}
+
+
+.projectName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+
+section {
+
+
+  padding: 0;
+}
+
+
+section:nth-child(even) {
+  padding: 0;
+}
+
+
+#sourceCodeProject {
+  display: grid;
+  grid-area: sourceCode;
+  grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+  grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+  grid-template-areas:
+    "title title title title title"
+    "image . description description description"
+    "image . tools tools tools"
+    "image . view video github";
+  justify-items: center;
+  margin: 2em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+.toolsUsed {
+  display: block;
+  grid-area: tools;
+  justify-self: center;
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+
+#yatzyProject {
+  display: grid;
+  grid-area: yatzy;
+  grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+  grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+  grid-template-areas:
+    "title title title title title"
+    "image . description description description"
+    "image . tools tools tools"
+    "image . view video github";
+  justify-items: center;
+  margin: 2em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.view {
+  grid-area: view;
+
+}
+
+
+#projects {
+  background-color: rgba(22, 22, 22, 0.9);
+  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  grid-template-areas:
+    ". h2 ."
+    ". hr ."
+    ". bucketListMoviesProject ."
+    ". bugTracker ."
+    ". yatzy ."
+    ". sourceCode .";
+
+  padding-top: 5rem;
+  position: relative;
+  animation-name: projects;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  width: 100%;
+  margin: auto;
+  z-index: 10;
+}
+
+
+/* @keyframes projects {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+
+} */
+
+
+.projectimage {
+  border: darkgray solid 3px;
+  display: block;
+  grid-area: image;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  grid-area: title;
+  text-align: center;
+  padding-bottom: 15px;
+
+}
+
+
+.projectdescription {
+  grid-area: description;
+  text-align: center;
+}
+
+
+.projectlinks a:link {
+  color: var(--colorother1);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.projectlinks a:visited {
+  color: var(--colorother1);
+}
+
+
+#skills {
+  background-color: black;
+  display: grid;
+  grid-template-columns: .75fr 1fr 1fr 1fr 1fr .75fr;
+  grid-template-rows: .75fr 2fr 1fr;
+  grid-template-areas:
+    ". h2Skills h2Skills h2Skills h2Skills ."
+    ". skillJava skillDotNET skillSQL skillPython ."
+    ". skillJS skilljQuery skillHTML skillCSS  .";
+
+  font-size: 1.2rem;
+  padding-top: 3rem;
+  width: 100%;
+  justify-items: center;
+  z-index: 10;
+}
+
+
+#skills h2 {
+  font-size: 2rem;
+  color: white;
+  grid-area: h2Skills;
+  padding-top: 3rem;
+}
+
+
+#skillHTML {
+  transform-origin: center;
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
+  background: radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  grid-area: skillHTML;
+  justify-content: center;
+
+  position: relative;
+  text-align: center;
+
+  z-index: 3;
+}
+
+
+#skillCSS {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
+  background: radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillCSS;
+
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+
+  z-index: 2;
+
+}
+
+
+#skillJS {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
+  background: radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillJS;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+
+  z-index: 1;
+}
+
+
+#skilljQuery {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
+  background: radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skilljQuery;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+
+  z-index: 1;
+}
+
+
+#skillSQL {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
+  background: radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillSQL;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+
+#skillDotNET {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(216, 67, 41), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(41, 59, 216), #000);
+  background: radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillDotNET;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+
+#skillJava {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
+  background: radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillJava;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+
+#skillPython {
+  background: -webkit-radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
+  background: -moz-radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
+  background: radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  grid-area: skillPython;
+  flex-direction: column;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+
+.video {
+  grid-area: video;
+}
+
+@media only screen and (max-width: 1200px) {
+  .ball {
+    font-size: .75rem;
+    height: 5rem;
+    width: 5rem;
+    z-index: 3;
+  }
+
+
+  #bioImg {
+    width: 50%;
+    padding: 0;
+  }
+
+
+  #bioText {
+    padding: 5px;
+    margin: 0;
+  }
+
+
+  #footer {
+
+    position: relative;
+  }
+
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+
+  #header {
+    height: 4rem;
+  }
+
+
+  #header p {
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+
+  #mainContent {
+    padding-top: 4rem;
+  }
+
+
+  #mainBio {
+    grid-template-columns: .25fr 1fr .25fr;
+    grid-template-areas:
+      ". h2 ."
+      ". bioImg ."
+      ". bioText .";
+  }
+
+
+  #projects {
+    grid-template-columns: .15fr 1fr .15fr;
+    grid-template-areas:
+      ". h2 ."
+      ". hr ."
+      ". bucketListMoviesProject ."
+      ". bugTracker ."
+      ". yatzy ."
+      ". sourceCode .";
+
+    margin: 0 auto;
+
+  }
+
+
+  #skills {
+    grid-template-rows: .5fr 2fr 1fr;
+    font-size: 1.2rem;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
+
+
+  #skills h2 {
+    font-size: 1rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  .ball {
+    font-size: .75rem;
+    height: 4rem;
+    width: 4rem;
+    z-index: 3;
+  }
+
+
+  #bioImg {
+    width: 50%;
+  }
+
+
+  #bucketListMoviesProject {
+    align-items: center;
+    display: grid;
+    grid-area: bucketListMoviesProject;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr 1fr .25fr .25fr .5fr;
+    grid-template-areas:
+      "title title"
+      "image image"
+      "description description"
+      "tools tools"
+      "view github";
+    justify-items: center;
+    margin: 0em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+
+
+
+  #bugTrackerApp {
+    align-items: center;
+    display: grid;
+    grid-area: bugTracker;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr 1fr .25fr .25fr .5fr;
+    grid-template-areas:
+      "title title"
+      "image image"
+      "description description"
+      "tools tools"
+      "video github";
+    justify-items: center;
+    margin: 0em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  #header {
+    height: 3rem;
+  }
+
+  #header p {
+    font-size: .75em;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+
+  #mainContent {
+    padding-top: 3rem;
+  }
+
+  #mainBio p {
+    font-size: 1rem;
+  }
+
+  #jobTitle {
+    font-size: .75rem;
+
+  }
+
+
+  #mainBio {
+    padding-bottom: 2rem;
+  }
+
+  #name {
+    font-size: 100%;
+    text-align: center;
+  }
+
+
+  #projects {
+    grid-template-columns: .15fr 1fr .15fr;
+    grid-template-areas:
+      ". h2 ."
+      ". hr ."
+      ". bucketListMoviesProject ."
+      ". bugTracker ."
+      ". yatzy ."
+      ". sourceCode .";
+
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+
+
+  .projectimage {
+    width: 250px;
+  }
+
+
+  .projectTitle {
+    font-size: .75rem;
+  }
+
+
+  #skills {
+    font-size: .75rem;
+
+  }
+
+
+  #sourceCodeProject {
+    display: grid;
+    grid-area: sourceCode;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr 1fr .25fr .25fr .5fr;
+    grid-template-areas:
+      "title title"
+      "image image"
+      "description description"
+      "tools tools"
+      "view github";
+    justify-items: center;
+    margin: 0em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+
+
+  #yatzyProject {
+    display: grid;
+    grid-area: yatzy;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr 1fr .25fr .25fr .5fr;
+    grid-template-areas:
+      "title title"
+      "image image"
+      "description description"
+      "tools tools"
+      "view github";
+    justify-items: center;
+    margin: 0em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  #header {
+    height: 3rem;
+    width: 100%;
+  }
+
+
+  #mainContent {
+    top: 0rem;
+  }
+
+  #mainBio p {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  #projects {
+    padding-top: 1rem;
+
+  }
+
+  #mainBio {
+    padding-bottom: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+  #header {
+    height: 10vh;
+    width: 100%;
+  }
+
+
+  #mainContent {
+    top: 0vh;
+  }
+
+
+}
