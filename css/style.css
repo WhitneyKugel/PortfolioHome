@@ -24,9 +24,10 @@
 
 #bioImg {
   border: black solid 2px;
-  border-radius: 20%;
+  border-radius: 50%;
   grid-area: bioImg;
   margin: 2rem;
+	width: 300px;
   justify-self: center;
 }
 
@@ -377,20 +378,6 @@ h4 {
 
 }
 
-/* @keyframes headerSkills {
-
-  from {
-    opacity: 0%;
-  }
-  
-  to {
-    opacity: 100%;
-  }
-  
-  } */
-
-
-
 #headerContact a {
   font-size: 1.15em;
   font-weight: bold;
@@ -518,18 +505,16 @@ to {
 
 #mainBio {
   display: grid;
-  padding-top: 12vh;
+  padding-top: 10vh;
   padding-bottom: 5rem;
   width: 100%;
   color: #000000;
   background-color: rgba(216, 216, 216, 0.9);
   grid-template-rows: auto auto;
-  grid-template-columns: .25fr 1fr 1fr .25fr;
+  grid-template-columns: .25fr .25fr 1fr .25fr;
   grid-template-areas:
-    ". bioImg . ."
     ". bioImg h2 . "
-    ". bioImg bioText bioText"
-    " . bioImg . . ";
+    ". bioImg bioText .";
   z-index: 10;
 }
 
@@ -652,6 +637,7 @@ section:nth-child(even) {
 
 .projectimage {
   border: darkgray solid 3px;
+	border-radius: 10px;
   display: block;
   grid-area: image;
   margin-left: auto;
@@ -684,172 +670,6 @@ section:nth-child(even) {
 .projectlinks a:visited {
   color: var(--colorother1);
 }
-
-
-#skills {
-  background-color: black;
-  display: grid;
-  grid-template-columns: .75fr 1fr 1fr 1fr 1fr .75fr;
-  grid-template-rows: .75fr 2fr 1fr;
-  grid-template-areas:
-    ". h2Skills h2Skills h2Skills h2Skills ."
-    ". skillJava skillDotNET skillSQL skillPython ."
-    ". skillJS skilljQuery skillHTML skillCSS  .";
-
-  font-size: 1.2rem;
-  padding-top: 3rem;
-  width: 100%;
-  justify-items: center;
-  z-index: 10;
-}
-
-
-#skills h2 {
-  font-size: 2rem;
-  color: white;
-  grid-area: h2Skills;
-  padding-top: 3rem;
-}
-
-
-#skillHTML {
-  transform-origin: center;
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
-  background: radial-gradient(25px 25px, circle, rgb(32, 145, 17), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  grid-area: skillHTML;
-  justify-content: center;
-
-  position: relative;
-  text-align: center;
-
-  z-index: 3;
-}
-
-
-#skillCSS {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
-  background: radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillCSS;
-
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-
-  z-index: 2;
-
-}
-
-
-#skillJS {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
-  background: radial-gradient(25px 25px, circle, rgb(175, 150, 11), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillJS;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-
-  z-index: 1;
-}
-
-
-#skilljQuery {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
-  background: radial-gradient(25px 25px, circle, rgb(24, 43, 146), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skilljQuery;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-
-  z-index: 1;
-}
-
-
-#skillSQL {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
-  background: radial-gradient(25px 25px, circle, rgb(94, 41, 216), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillSQL;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-
-#skillDotNET {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(216, 67, 41), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(41, 59, 216), #000);
-  background: radial-gradient(25px 25px, circle, rgb(216, 41, 41), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillDotNET;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-
-#skillJava {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
-  background: radial-gradient(25px 25px, circle, rgb(212, 95, 26), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillJava;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-
-#skillPython {
-  background: -webkit-radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
-  background: -moz-radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
-  background: radial-gradient(25px 25px, circle, rgb(41, 146, 216), #000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  grid-area: skillPython;
-  flex-direction: column;
-
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
 
 .video {
   grid-area: video;
@@ -927,18 +747,6 @@ section:nth-child(even) {
 
   }
 
-
-  #skills {
-    grid-template-rows: .5fr 2fr 1fr;
-    font-size: 1.2rem;
-    padding-top: 0rem;
-    padding-bottom: 2rem;
-  }
-
-
-  #skills h2 {
-    font-size: 1rem;
-  }
 
 }
 
@@ -1061,12 +869,6 @@ section:nth-child(even) {
 
   .projectTitle {
     font-size: .75rem;
-  }
-
-
-  #skills {
-    font-size: .75rem;
-
   }
 
 
