@@ -4,6 +4,7 @@
 
 :root {
 	--colorMain: #004380;
+	--colorMainDark: #002545;
 	--colorOther1: #C5A500;
 	--colorOther2: #C50A00;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -11,17 +12,24 @@
 
 #bioImg {
 	border: solid 1px #000;
-	border-radius: 100%;
-	display: flex;
-	justify-self: center;
-	grid-area: bioImg;
-	width: 10rem;
+	width: 100vw;
+}
+
+#bioName {
+	color: white;
+	position: relative;
+	right: 8rem;
+	top: 5rem;
+	z-index: 1000;
 }
 
 #bioText {
-	grid-area: bioText;
 	margin-bottom: 1rem;
-	text-align: center;
+	color: white;
+	position: relative;
+	right: 0rem;
+	top: 5rem;
+	z-index: 1000;
 }
 
 #bucketListMoviesProject {
@@ -46,6 +54,30 @@ a:visited {
 	color: whitesmoke;
 }
 
+#footer {
+	background: linear-gradient(180deg, rgba(0,37,69,1) 0%, rgba(0,67,128,1) 99%);
+	color: white;
+	font-size: .75em;
+	margin: 0;
+	height: 55px;
+	width: 100%;
+	grid-area: footer;
+	position: relative;
+	bottom: 0rem;
+	z-index: 10;
+}
+
+#footer a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+#footer p {
+	padding: 1rem;
+	font-size: 1rem;
+	margin-top: 0;
+}
+
 .github {
 	grid-area: github;
 }
@@ -61,7 +93,7 @@ h2 {
 }
 
 header {
-	background-color: var(--colorMain);
+	background: linear-gradient(180deg, rgba(0,37,69,1) 0%, rgba(0,67,128,1) 99%);
 	display: flex;
 	flex-direction: row;
 	grid-area: header;
@@ -89,13 +121,6 @@ header {
 	animation-name: headerContact;
 }
 
-
-#headerBio {
-	grid-area: headerBio;
-	display: grid;
-	animation-name: headerBio;
-}
-
 .headerStyle {
 	align-self: center;
 	animation-duration: 3s;
@@ -111,8 +136,7 @@ header {
 	transition-timing-function: linear;
 }
 
-#mainBio {
-	background-color: rgb(255, 255, 255);
+/* #mainBio {
 	display: grid;
 	padding-top: 2vh;
 	padding-bottom: 2vh;
@@ -124,7 +148,7 @@ header {
 		"bioText"
 		"bioImg";
 	z-index: 10;
-}
+} */
 
 #mainBio p {
 	font-size: 1rem;
@@ -159,7 +183,7 @@ header {
 }
 
 .projectimage {
-	border: 2px solid #000;
+	border: 5px solid #434343;
 	border-radius: 10px;
 	grid-area: project-image;
 	width: 250px;
@@ -345,32 +369,6 @@ header {
 	#connect a:active {
 		text-decoration: none;
 		color: white;
-	}
-
-
-	#footer {
-
-		background-color: var(--colorMain);
-		color: rgb(0, 0, 0);
-		font-size: .75em;
-		margin: 0;
-		height: 55px;
-		width: 100%;
-		grid-area: footer;
-		position: relative;
-		bottom: 0rem;
-		z-index: 10;
-	}
-
-	#footer a {
-		color: rgb(0, 0, 0);
-		text-decoration: none;
-	}
-
-	#footer p {
-		padding: 1rem;
-		font-size: 1rem;
-		margin-top: 0;
 	}
 
 
