@@ -1,0 +1,631 @@
+* {
+	margin: 0;
+}
+
+:root {
+	--colorMain: #004380;
+	--colorOther1: #C5A500;
+	--colorOther2: #C50A00;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#bioImg {
+	border: solid 1px #000;
+	border-radius: 100%;
+	display: flex;
+	justify-self: center;
+	grid-area: bioImg;
+	width: 10rem;
+}
+
+#bioText {
+	grid-area: bioText;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+#bucketListMoviesProject {
+	grid-area: bucketListMoviesProject;
+}
+
+#bugTrackerApp {
+	grid-area: bugTracker;
+}
+
+a:link {
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: gray;
+	transition-duration: 300ms;
+}
+
+a:visited {
+	color: whitesmoke;
+}
+
+.github {
+	grid-area: github;
+}
+
+h1 {
+	font-size: 1rem;
+	text-align: center;
+}
+
+h2 {
+	grid-area: h2;
+	text-align: center;
+}
+
+header {
+	background-color: var(--colorMain);
+	display: flex;
+	flex-direction: row;
+	grid-area: header;
+	height: 3rem;
+	z-index: 500;
+}
+
+#headerProjects {
+	animation-name: headerProjects;
+	display: grid;
+	grid-area: headerProjects;
+}
+
+
+#headerLinkedIn {
+	animation-name: headerLinkedIn;
+	display: grid;
+	grid-area: headerLinkedIn;
+}
+
+
+#headerContact {
+	grid-area: headerContact;
+	display: grid;
+	animation-name: headerContact;
+}
+
+
+#headerBio {
+	grid-area: headerBio;
+	display: grid;
+	animation-name: headerBio;
+}
+
+.headerStyle {
+	align-self: center;
+	animation-duration: 3s;
+	display: flex;
+	justify-self: end;
+	font-size: 1em;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	transform: scale(1.0);
+	transition-duration: .25s;
+	transition-timing-function: linear;
+}
+
+#mainBio {
+	background-color: rgb(255, 255, 255);
+	display: grid;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	width: 100%;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"h2"
+		"bioText"
+		"bioImg";
+	z-index: 10;
+}
+
+#mainBio p {
+	font-size: 1rem;
+}
+
+#jobTitle {
+	font-size: .75rem;
+}
+
+#name {
+	font-size: 100%;
+	text-align: center;
+}
+
+#projects {
+	grid-template-columns: .15fr .7fr .15fr;
+	grid-template-areas:
+		". h2 ."
+		". hr ."
+		". bucketListMoviesProject ."
+		". bugTracker ."
+		". yatzy ."
+		". sourceCode .";
+
+	margin: 0 auto;
+	padding-top: 1rem;
+}
+
+.projectdescription {
+	grid-area: description;
+	text-align: center;
+}
+
+.projectimage {
+	border: 2px solid #000;
+	border-radius: 10px;
+	grid-area: project-image;
+	width: 250px;
+}
+
+.projectTitle {
+	display: flex;
+	align-self: center;
+	font-size: .75rem;
+	grid-area: title;
+}
+
+.projectLayout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: .25fr 1fr .25fr .5fr;
+	grid-template-areas:
+		"title title"
+		"project-image project-image"
+		"description description"
+		"view github";
+	justify-items: center;
+	margin: 0em;
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+
+.social {
+	grid-area: social;
+	width: 50%;
+}
+
+#sourceCodeProject {
+	grid-area: sourceCode;
+}
+
+.view {
+	grid-area: view;
+}
+
+#yatzyProject {
+	grid-area: yatzy;
+}
+
+/* @media only screen and (min-width: 361px) {
+
+
+	#header {
+		height: 3rem;
+	}
+
+	#header p {
+		font-size: .75em;
+		margin: 0;
+		padding-bottom: 5px;
+	}
+
+	#mainContent {
+		top: 0rem;
+	}
+
+	#mainBio p {
+		font-size: 1rem;
+	}
+
+	h4 {
+		font-size: 1em;
+	}
+
+	#projects {
+		padding-top: 1rem;
+
+	}
+
+	#mainBio {
+		padding-bottom: 1rem;
+	}
+
+	/* Mobile First Design */
+
+/* }
+
+/* @media only screen and (min-width: 700px) {
+	#backDrop {
+		background-color: rgba(48, 48, 48, 0.733);
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		position: fixed;
+	}
+
+
+	#bioImg {
+		border: rgb(255, 0, 0) solid 2px;
+		border-radius: 50%;
+		grid-area: bioImg;
+		margin: 2rem;
+		width: 300px;
+		justify-self: center;
+	}
+
+
+	body {
+		margin: 0;
+	}
+
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"header"
+			"mainContent"
+			"footer";
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+	}
+
+
+	#bucketListMoviesProject {
+		align-items: center;
+		display: grid;
+		grid-area: bucketListMoviesProject;
+		grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+		grid-template-rows: .25fr .5fr .5fr .25fr .25fr;
+		grid-template-areas:
+			"title title title title title"
+			"image . description description description"
+			"image . tools tools tools"
+			"image . view video github";
+		justify-items: center;
+		margin: 2em;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+
+
+	#bugTrackerApp {
+		align-items: center;
+		display: grid;
+		grid-area: bugTracker;
+		grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+		grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+		grid-template-areas:
+			"title title title title title"
+			"image . description description description"
+			"image . tools tools tools"
+			"image . video view github";
+		justify-items: center;
+		margin: 2em;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	#connect a:link {
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+	}
+
+
+	#connect a:visited {
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+	}
+
+
+	#connect a:hover {
+		text-decoration: none;
+		color: red;
+	}
+
+
+	#connect a:active {
+		text-decoration: none;
+		color: white;
+	}
+
+
+	#footer {
+
+		background-color: var(--colorMain);
+		color: rgb(0, 0, 0);
+		font-size: .75em;
+		margin: 0;
+		height: 55px;
+		width: 100%;
+		grid-area: footer;
+		position: relative;
+		bottom: 0rem;
+		z-index: 10;
+	}
+
+	#footer a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
+
+	#footer p {
+		padding: 1rem;
+		font-size: 1rem;
+		margin-top: 0;
+	}
+
+
+	#formdiv {
+		font-size: 1em;
+		display: block;
+		text-align: center;
+	}
+
+
+	h2 {
+		font-size: 2em;
+		color: rgb(255, 255, 255);
+		grid-area: h2;
+		text-align: center;
+		width: 100%;
+	}
+
+
+	h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+		grid-area: h3;
+		text-align: center;
+	}
+
+
+	h4 {
+		font-size: 2em;
+		color: rgb(0, 0, 0);
+		grid-area: h2;
+		text-align: center;
+		width: 100%;
+	}
+
+
+
+	hr {
+		border: 0;
+		border-top: solid 4px;
+		grid-area: hr;
+		height: 0;
+		padding-bottom: 1rem;
+		width: 100%;
+	}
+
+	html {
+		background-color: whitesmoke;
+		scroll-behavior: smooth;
+	}
+
+	#jobTitle {
+		grid-area: jobTitle;
+		animation-name: jobTitle;
+		animation-duration: 3s;
+		font-size: 1.5rem;
+		align-self: center;
+	}
+
+	#linkedInImg {
+		width: 3rem;
+	}
+
+	#mainContent {
+		display: grid;
+		grid-area: mainContent;
+		grid-column: 1fr;
+		padding-top: 0vh;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		position: relative;
+	}
+
+	#message {
+		font-size: 1em;
+		height: 15em;
+		width: 30em;
+	}
+
+
+	.projectName {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1rem;
+	}
+
+
+	section {
+		padding: 0;
+	}
+
+
+	section:nth-child(even) {
+		padding: 0;
+	}
+
+
+	#sourceCodeProject {
+		display: grid;
+		grid-area: sourceCode;
+		grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+		grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+		grid-template-areas:
+			"title title title title title"
+			"image . description description description"
+			"image . tools tools tools"
+			"image . view video github";
+		justify-items: center;
+		margin: 2em;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	#projects {
+		background-color: rgba(0, 0, 0, 0.9);
+		display: grid;
+		grid-template-columns: .25fr 1fr .25fr;
+		grid-template-areas:
+			". h2 ."
+			". hr ."
+			". bucketListMoviesProject ."
+			". bugTracker ."
+			". yatzy ."
+			". sourceCode .";
+
+		padding-top: 5rem;
+		position: relative;
+		width: 100%;
+		margin: auto;
+		z-index: 10;
+	}
+
+	.projectimage {
+		border: darkgray solid 3px;
+		border-radius: 10px;
+		display: block;
+		grid-area: image;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	.projectTitle {
+		font-size: 1.25rem;
+		font-weight: bold;
+		grid-area: title;
+		text-align: center;
+		padding-bottom: 15px;
+
+	}
+
+
+	.projectlinks a:link {
+		color: var(--colorother1);
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.projectlinks a:visited {
+		color: var(--colorother1);
+	}
+
+
+
+	.video {
+		grid-area: video;
+	}
+
+	#yatzyProject {
+		display: grid;
+		grid-area: yatzy;
+		grid-template-columns: 1fr .15fr .33fr .33fr .33fr;
+		grid-template-rows: .25fr 1fr 1fr 1fr .5fr;
+		grid-template-areas:
+			"title title title title title"
+			"image . description description description"
+			"image . tools tools tools"
+			"image . view video github";
+		justify-items: center;
+		margin: 2em;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.ball {
+		font-size: .75rem;
+		height: 5rem;
+		width: 5rem;
+		z-index: 3;
+	}
+
+
+	#bioImg {
+		width: 50%;
+		padding: 0;
+		background-color: gold;
+	}
+
+
+	#bioText {
+		padding: 5px;
+		margin: 0;
+	}
+
+
+	#footer {
+
+		position: relative;
+	}
+
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+
+	#header {
+		height: 4rem;
+	}
+
+
+	#header p {
+		font-size: 1em;
+		margin: 0;
+		padding-bottom: 5px;
+	}
+
+
+	#mainContent {
+		padding-top: 4rem;
+	}
+
+
+	#mainBio {
+		grid-template-columns: .25fr 1fr .25fr;
+		grid-template-areas:
+			". h2 ."
+			". bioImg ."
+			". bioText ."
+			". social .";
+	}
+
+
+	#projects {
+		grid-template-columns: .15fr 1fr .15fr;
+		grid-template-areas:
+			". h2 ."
+			". hr ."
+			". bucketListMoviesProject ."
+			". bugTracker ."
+			". yatzy ."
+			". sourceCode .";
+
+		margin: 0 auto;
+
+	}
+} */ 
