@@ -10,26 +10,49 @@
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#bioImg {
-	border: solid 1px #000;
-	width: 100vw;
+#sideBio {
+	display: grid;
+	grid-template-rows: .10fr .10fr .25fr 1.5fr;
+	grid-template-areas:
+		"bioName"
+		"bioText"
+		"bioImg"
+		".";
+	/* "bioLinkedIn"; */
+	grid-area: sideBio;
+	background-color: var(--colorMainDark);
 }
 
 #bioName {
 	color: white;
-	position: relative;
-	right: 8rem;
-	top: 5rem;
-	z-index: 1000;
+	padding-top: 1rem;
+	z-index: 10;
+	grid-area: bioName;
 }
 
 #bioText {
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	color: white;
-	position: relative;
-	right: 0rem;
-	top: 5rem;
-	z-index: 1000;
+	/* position: relative;
+	right: 0rem; */
+	/* top: 5rem; */
+	text-align: center;
+	z-index: 10;
+	grid-area: bioText;
+}
+
+#bioImg {
+	border: solid 3px #ffffff;
+	width: 150px;
+	grid-area: bioImg;
+	justify-self: center;
+	border-radius: 50%;
+}
+
+#bioLinkedIn {
+	text-align: center;
+	grid-area: bioLinkedIn;
+
 }
 
 #bucketListMoviesProject {
@@ -55,7 +78,7 @@ a:visited {
 }
 
 #footer {
-	background: linear-gradient(180deg, rgba(0,37,69,1) 0%, rgba(0,67,128,1) 99%);
+	background: linear-gradient(180deg, rgba(0, 37, 69, 1) 0%, rgba(0, 67, 128, 1) 99%);
 	color: white;
 	font-size: .75em;
 	margin: 0;
@@ -82,6 +105,110 @@ a:visited {
 	grid-area: github;
 }
 
+.github button {
+	align-items: center;
+	appearance: none;
+	background-clip: padding-box;
+	background-color: initial;
+	background-image: none;
+	border-style: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	flex-direction: row;
+	flex-shrink: 0;
+	/* font-family: Eina01,sans-serif; */
+	font-size: 16px;
+	font-weight: 800;
+	justify-content: center;
+	line-height: 24px;
+	margin: 0;
+	min-height: 64px;
+	outline: none;
+	overflow: visible;
+	padding: 19px 26px;
+	pointer-events: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	width: auto;
+	word-break: keep-all;
+	z-index: 0;
+}
+
+.github button:before,
+.github button:after {
+	border-radius: 80px;
+}
+
+.github button:before {
+	background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+}
+
+.github button:after {
+	background-color: initial;
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	content: "";
+	display: block;
+	left: 4px;
+	overflow: hidden;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	transition: all 100ms ease-out;
+	z-index: -1;
+}
+
+.github button:hover:not(:disabled):before {
+	background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+}
+
+.github button:hover:not(:disabled):after {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	transition-timing-function: ease-in;
+	opacity: 0;
+}
+
+.github button:active:not(:disabled) {
+	color: #ccc;
+}
+
+.github button:active:not(:disabled):before {
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.github button:active:not(:disabled):after {
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	top: 4px;
+}
+
+.github button:disabled {
+	cursor: default;
+	opacity: .24;
+}
+
 h1 {
 	font-size: 1rem;
 	text-align: center;
@@ -93,12 +220,12 @@ h2 {
 }
 
 header {
-	background: linear-gradient(180deg, rgba(0,37,69,1) 0%, rgba(0,67,128,1) 99%);
+	background: var(--colorMainDark);
 	display: flex;
 	flex-direction: row;
 	grid-area: header;
 	height: 3rem;
-	z-index: 500;
+	z-index: 5;
 }
 
 #headerProjects {
@@ -150,9 +277,9 @@ header {
 	z-index: 10;
 } */
 
-#mainBio p {
+/* #mainBio p {
 	font-size: 1rem;
-}
+} */
 
 #jobTitle {
 	font-size: .75rem;
@@ -161,6 +288,131 @@ header {
 #name {
 	font-size: 100%;
 	text-align: center;
+}
+
+.nav-toggle {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+	outline: 3px solid rgb(235, 164, 0);
+}
+
+.nav-toggle-label {
+	top: 0;
+	left: 0;
+	padding-top: 1.45rem;
+	padding-left: .5rem;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	display: block;
+	background: rgb(255, 255, 255);
+	height: .3em;
+	width: 3em;
+	border-radius: 3px;
+	position: relative;
+	top: -10;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	content: '';
+	position: absolute;
+}
+
+.nav-toggle-label span::before {
+	bottom: 15px;
+}
+
+.nav-toggle-label span::after {
+	top: 15px;
+}
+
+nav {
+	background: var(--colorMain);
+	color: #fff;
+	font-size: 1em;
+	height: 150px;
+	left: 0;
+	padding-top: 2rem;
+	position: absolute;
+	text-align: left;
+	transform-origin: top;
+	transform: scale(1, 0);
+	transition: transform 200ms ease-in-out;
+	width: 66vw;
+	z-index: 100;
+}
+
+nav ul {
+	background-color: var(--maincolor);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul ul {
+	background-color: var(--maincolor);
+	display: none;
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+nav a {
+	font-size: 1em;
+	padding: .3em;
+	text-decoration: none;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity 50ms ease-in-out;
+}
+
+nav a:link {
+	color: #fff;
+}
+
+nav a:visited {
+	color: #fff;
+}
+
+nav a:focus {
+	color: var(--secondarycolor2);
+}
+
+nav a:hover {
+	color: var(--secondarycolor2);
+	transition: .3s ease;
+}
+
+.nav-toggle:checked~nav {
+	height: 100vh;
+	transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+	opacity: 1;
+	transition: opacity 5ms ease-in-out 10ms;
+}
+
+#pageLayout {
+	display: grid;
+	grid-template-columns: .25fr .75fr;
+	grid-template-areas:
+		"sideBio projects";
+
 }
 
 #projects {
@@ -175,6 +427,7 @@ header {
 
 	margin: 0 auto;
 	padding-top: 1rem;
+	grid-area: projects;
 }
 
 .projectdescription {
@@ -224,12 +477,119 @@ header {
 	grid-area: view;
 }
 
+.view button {
+	align-items: center;
+	appearance: none;
+	background-clip: padding-box;
+	background-color: initial;
+	background-image: none;
+	border-style: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	flex-direction: row;
+	flex-shrink: 0;
+	/* font-family: Eina01,sans-serif; */
+	font-size: 16px;
+	font-weight: 800;
+	justify-content: center;
+	line-height: 24px;
+	margin: 0;
+	min-height: 64px;
+	outline: none;
+	overflow: visible;
+	padding: 19px 26px;
+	pointer-events: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	width: auto;
+	word-break: keep-all;
+	z-index: 0;
+}
+
+.view button:before,
+.view button:after {
+	border-radius: 80px;
+}
+
+.view button:before {
+	background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+}
+
+.view button:after {
+	background-color: initial;
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	content: "";
+	display: block;
+	left: 4px;
+	overflow: hidden;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	transition: all 100ms ease-out;
+	z-index: -1;
+}
+
+.view button:hover:not(:disabled):before {
+	background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+}
+
+.view button:hover:not(:disabled):after {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	transition-timing-function: ease-in;
+	opacity: 0;
+}
+
+.view button:active:not(:disabled) {
+	color: #ccc;
+}
+
+.view button:active:not(:disabled):before {
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.view button:active:not(:disabled):after {
+	background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	top: 4px;
+}
+
+.view button:disabled {
+	cursor: default;
+	opacity: .24;
+}
+
 #yatzyProject {
 	grid-area: yatzy;
 }
 
 /* @media only screen and (min-width: 361px) {
 
+  .github button {
+    padding: 19px 32px;
+  }
 
 	#header {
 		height: 3rem;
@@ -626,4 +986,4 @@ header {
 		margin: 0 auto;
 
 	}
-} */ 
+} */

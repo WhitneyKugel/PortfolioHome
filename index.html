@@ -1,102 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property='og:title' content='Whitney Kugel: Software Developer'/>
-    <meta property='og:image' content=''/>
-    <meta property='og:description' content='Software & Web Developer.'/>
-    <meta property='og:url' content='//www.WhitneyKugel.com'/>
-    <meta property="og:site_name" content="Whitney Kugel">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Whitney Kugel: Software Developer" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Software & Web Developer." />
+    <meta property="og:url" content="//www.WhitneyKugel.com" />
+    <meta property="og:site_name" content="Whitney Kugel" />
     <title>Whitney Kugel</title>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous">
-    </script>
-    <link rel="Stylesheet" type="text/css" href="css/styles.css">
+      crossorigin="anonymous"
+    ></script>
+    <link rel="Stylesheet" type="text/css" href="css/styles.css" />
   </head>
+
   <body>
-    <main>
-      <header>
-        <p id="headerProjects" class="headerStyle"><a href="#projects">Projects</a></p>
-        <p id="headerLinkedIn" class="headerStyle"><a href="https://www.linkedin.com/in/whitneykugel" target="_blank">LinkedIn</a></p>
-        <p id="headerContact" class="headerStyle"><a href="mailto:kugel.whitney@gmail.com">Contact</a></p>
-      </header>
+    <!-- <header>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/whitneykugel" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="mailto:kugel.whitney@gmail.com">Contact</a></li>
+        <!-- <li id="headerProjects" class="headerStyle"><a
+					href="#projects">Projects</a></li>
+			<li id="headerLinkedIn" class="headerStyle"><a
+					href="https://www.linkedin.com/in/whitneykugel"
+					target="_blank">LinkedIn</a></li>
+			<li id="headerContact" class="headerStyle"><a
+					href="mailto:kugel.whitney@gmail.com">Contact</a></li> -->
+      <!-- </ul> -->
+    </nav>
 
-			<div id="mainBio">
+    <main id="pageLayout">
+      <section id="sideBio">
 				<h1 id="bioName">Whitney Kugel</h1>
-				<p id="bioText">
-					Software & Web Developer
-				</p>
-				<img id="bioImg" src="images/WhitneyFullShot.jpeg" alt="Whitney Kugel">
-			</div>
+        <p id="bioText">Software & Web Developer</p>
+        <img id="bioImg" src="images/WhitneyHeadShot.jpg" alt="Whitney Kugel" />
+				<!-- <p id="bioLinkedIn"><a href="https://www.linkedin.com/in/whitneykugel" target="_blank"
+				>LinkedIn</a></p> -->
 
-
+      </section>
       <div id="mainContent">
         <section id="projects">
-
           <h1>Projects</h1>
 
           <div id="bucketListMoviesProject" class="projectLayout">
-            
-            <img class="projectimage" src="images/MoviesSite.png" alt="Bucket List Movies pic">
-            <a class="projectTitle">Bucket List Movies</a> 
-            <p class="projectdescription">A movie database demo.<br>Create a list of all the movies you want to see.</p>
-            <a href="http://www.whitneykugel.com:8080/BucketListMovies/" target="_blank" class="view"><button >View</button></a> 
-            <a href="" target="_blank" class="video"></a> 
+            <img
+              class="projectimage"
+              src="images/MoviesSite.png"
+              alt="Bucket List Movies pic"
+            />
+            <a class="projectTitle">Bucket List Movies</a>
+            <p class="projectdescription">
+              A movie database demo.<br />Create a list of all the movies you
+              want to see.
+            </p>
+            <a
+              href="http://www.whitneykugel.com:8080/BucketListMovies/"
+              target="_blank"
+              class="view"
+              ><button>View</button></a
+            >
+            <a href="" target="_blank" class="video"></a>
             <!-- <a href="" target="_blank"><button class="video">Video</button></a>  -->
-            <a href="https://github.com/WhitneyKugel/BucketListMovies" target="_blank" class="github"><button>Github</button></a>
+            <a
+              href="https://github.com/WhitneyKugel/BucketListMovies"
+              target="_blank"
+              class="github"
+              ><button>Github</button></a
+            >
           </div>
 
-    
           <div id="sourceCodeProject" class="projectLayout">
-
-            <img class="projectimage" src="images/SourceCodeSitePic.png" alt="Sample image of the mock website called Source Code">
-            <a class="projectTitle">Source Code</a> 
+            <img
+              class="projectimage"
+              src="images/SourceCodeSitePic.png"
+              alt="Sample image of the mock website called Source Code"
+            />
+            <a class="projectTitle">Source Code</a>
             <p class="projectdescription">A fictional restaurant website.</p>
-            <a href="../Projects/source_code/index.html" target="_blank" class="view"><button >View</button></a> 
-            <a href="" target="_blank" class="video"></a> 
+            <a
+              href="../Projects/source_code/index.html"
+              target="_blank"
+              class="view"
+              ><button>View</button></a
+            >
+            <a href="" target="_blank" class="video"></a>
             <!-- <a href="" target="_blank"><button class="video">Video</button></a>  -->
-            <a href="https://github.com/WhitneyKugel/SourceCodeWebsite" target="_blank" class="github"><button>Github</button></a>
+            <a
+              href="https://github.com/WhitneyKugel/SourceCodeWebsite"
+              target="_blank"
+              class="github"
+              ><button>Github</button></a
+            >
           </div>
 
           <div id="yatzyProject" class="projectLayout">
-
-            <img class="projectimage" src="images/YatzyPic.png" alt="Sample image of Yatzy">
+            <img
+              class="projectimage"
+              src="images/YatzyPic.png"
+              alt="Sample image of Yatzy"
+            />
             <a class="projectTitle">Yatzy</a>
             <p class="projectdescription">Play Yatzy.</p>
-            <a href="../Projects/Yatzy_JavaScript/yatzy_project/yatzy.html" target="_blank" class="view"><button >View</button></a>
-            <a href="" target="_blank" class="video"></a> 
+            <a
+              href="../Projects/Yatzy_JavaScript/yatzy_project/yatzy.html"
+              target="_blank"
+              class="view"
+              ><button>View</button></a
+            >
+            <a href="" target="_blank" class="video"></a>
             <!-- <a href="" target="_blank"><button class="video">Video</button></a>  -->
-            <a href="https://github.com/WhitneyKugel/Yatzy_JavaScript" target="_blank" class="github"><button>Github</button></a>
+            <a
+              href="https://github.com/WhitneyKugel/Yatzy_JavaScript"
+              target="_blank"
+              class="github"
+              ><button>Github</button></a
+            >
           </div>
 
           <div id="bugTrackerApp" class="projectLayout">
-
             <a class="projectTitle">Bug Tracker</a>
-            <img class="projectimage" src="images/bugTrackerPic.png" alt="Bug Tracking App Screenshot">
-            
+            <img
+              class="projectimage"
+              src="images/bugTrackerPic.png"
+              alt="Bug Tracking App Screenshot"
+            />
+
             <div class="projectdescription">
               <p>Track bugs and/or others ticket issues.</p>
-
             </div>
-            <a href="" target="_blank" class="view"></a> 
-            <a href="videos/bugtracker.mp4" target="_blank" class="view"><button>Video</button></a> 
-            <a href="https://github.com/WhitneyKugel/BugTrackerApplication" target="_blank" class="github"><button>Github</button></a>
-
+            <a href="" target="_blank" class="view"></a>
+            <a href="videos/bugtracker.mp4" target="_blank" class="view"
+              ><button>Video</button></a
+            >
+            <a
+              href="https://github.com/WhitneyKugel/BugTrackerApplication"
+              target="_blank"
+              class="github"
+              ><button>Github</button></a
+            >
           </div>
-
         </section>
       </div>
 
       <div id="footer">
         <p>&copy;2023 WhitneyKugel.com</p>
       </div>
-
     </main>
 
-    <script src="js/whitneykugel.js"></script> 
-    <script src="js/jquery.easing.1.3.js"></script> 
+    <script src="js/whitneykugel.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
   </body>
 </html>
